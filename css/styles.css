@@ -1,0 +1,167 @@
+:root {
+  --bg-light: #4b4436;
+  --bg-dark: #271f19;
+
+  --card-bg-light: #f8f8f5;
+  --card-bg-dark: #1e1e1e;
+
+  --heading-light: #222222;
+  --heading-dark: #dadadb;
+
+  --text-light: #727272;
+  --text-dark: #c4c4c5;
+  --text-secondary-light: #222222;
+  --text-secondary-dark: #dadadb;
+
+  --shadow-light: #00000080;
+  --shadow-dark: #00000080;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+a,
+a:visited,
+a:focus {
+  color: var(--text-secondary-light);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+h1 {
+  color: var(--heading-light);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+h2 {
+  color: var(--heading-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.2rem 0;
+  opacity: 0.7;
+}
+
+h3 {
+  color: var(--heading-light);
+  font-weight: 600;
+  margin: 1.2rem 0;
+}
+
+p {
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+p.subtitle {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+.container {
+  background-color: var(--card-bg-light);
+  border-radius: 5%;
+  box-shadow: 0 4px 10px var(--shadow-light);
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.disclaimer {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  opacity: 0.5;
+  text-align: center;
+  width: 100%;
+}
+
+.hobbies>i {
+  color: var(--text-light);
+  margin: 0.5rem;
+}
+
+.photo {
+  border-radius: 50%;
+  display: inline-block;
+  max-width: 100%;
+  width: 180px;
+}
+
+.social ul {
+  border: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: var(--bg-dark);
+    --card-bg-light: var(--card-bg-dark);
+    --heading-light: var(--heading-dark);
+    --text-light: var(--text-dark);
+    --text-secondary-light: var(--text-secondary-dark);
+    --shadow-light: var(--shadow-dark);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .hobbies>i {
+    font-size: 1rem;
+  }
+
+  .photo {
+    width: 150px;
+  }
+}
